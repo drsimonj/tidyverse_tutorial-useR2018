@@ -118,17 +118,17 @@ bookings %>%
 
 ## Grand challenge
 
-We have a theory that price, demand, and property type, affect properties' average review score. We also believe that the relative importance of these factors will differ between cities.
-
-For each city, create a separate linear model (`lm`) predicting the average review score of each property with:
+We believe price, demand, and property type, affect properties' average review score, and that the relative importance of these factors will differ between cities. For each city, fit a linear model (`lm`) to predict properties' average review score with:
 
 1. average price per night
 2. number of bookings (stayed or cancelled)
 3. property type
 
+*Remove properties with less than 2 non-missing review scores.
+
 Compare the predictive power (R-squared) across the cities.
 
-Remove properties with less than 2 non-missing review scores.
+*Reminder that data is simulated
 
 ## Part 1: data preparation
 

@@ -29,7 +29,7 @@ We're going to explore data* about customer bookings and properties to try and u
 knitr::include_graphics("../images/review-score.png")
 ```
 
-*Data is simulated
+*All data is simulated
 
 ## Setup
 
