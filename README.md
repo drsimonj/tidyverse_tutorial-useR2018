@@ -8,8 +8,8 @@ Download this repo to get the slides in HTML format. The slides can be found tog
 
 ## Data
 
-The tutorial uses two data sets stored as `.csv` files. Each can be found in the `data` directory.
+The tutorial uses two data sets stored as `.csv` files in the `data` directory.
 
 ## Acknowledgements
 
-Thank you to the useR! 2018 organising committee for having and helping me to give this workshop. Thank you to everyone at Booking.com who gave me feedback on earlier iterations of this workshop and helped me prepare this open-access version.
+Thank you to the useR! 2018 organising committee for having and helping me to give this workshop. Thank you to Booking.com for also helping me to attend useR! 2018, and to everyone there who gave me feedback on earlier iterations of this workshop and helped me prepare this open-access version.
