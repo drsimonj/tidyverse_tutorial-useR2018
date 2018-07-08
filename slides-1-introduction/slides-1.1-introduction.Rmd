@@ -25,6 +25,10 @@ Instructor: Simon Jackson
 
 How about the people (helpers/helpees) around you?
 
+## Getting the material for today
+
+[github.com/drsimonj/tidyverse_tutorial-useR2018](https://github.com/drsimonj/tidyverse_tutorial-useR2018)
+
 ## What is the Tidyverse?
 
 > "The tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying philosophy and common APIs." [tidyverse.org](https://www.tidyverse.org/)
@@ -63,13 +67,3 @@ From [R for Data Science](http://r4ds.had.co.nz/explore-intro.html):
 - How to explore and wrangle data (mostly in data frames) with Tidyverse packages
 - How to repeat yourself efficiently
 - How the Tidyverse can help to solve real problems (using simulated data)
-
-## Can I get the material?
-
-All material is on GitLab at:
-
-- [gitlab.booking.com/sjackson/tidyverse-workshop](https://gitlab.booking.com/sjackson/tidyverse-workshop)
-
-Or via shortcut:
-
-- [go/tidyverse](http://go/tidyverse)

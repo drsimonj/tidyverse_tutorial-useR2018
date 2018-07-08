@@ -28,3 +28,8 @@ knitr::opts_chunk$set(
 I hope this was useful for you and thank you for attending!
 
 Please find me to say hi, share feeedback, or just chat!
+
+<br/>
+
+### Simon Jackson | Lead Data Scientist, Booking.com
+### @drsimonj

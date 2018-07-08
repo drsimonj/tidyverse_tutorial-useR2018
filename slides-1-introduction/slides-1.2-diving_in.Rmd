@@ -57,9 +57,9 @@ bookings <- read_csv("data/bookings.csv")
 ```
 ```{r, eval = F}
 # Example from URL
-# d <- read_csv("https://gitlab.booking.com/
-#               sjackson/tidyverse-workshop/raw/master/
-#               data/workshop_data_1.csv")
+d <- read_csv("https://raw.githubusercontent.com/
+              drsimonj/tidyverse_tutorial-useR2018/
+              master/data/bookings.csv")
 ```
 ```{r, include = F}
 # Run for internal use (not shown on slides)
@@ -148,6 +148,14 @@ Create a **NEW** tibble (data frame) including `room_nights` and `review_score` 
 
 **DO NOT overwrite `bookings` in the process **
 
+## Answer
+
+```{r}
+x <- filter(bookings, price_per_night < 80)
+x <- select(x, room_nights, review_score)
+x
+```
+
 # [magrittr](http://magrittr.tidyverse.org/)
 
 ## magrittr and the pipe
@@ -193,6 +201,8 @@ x <- filter(bookings, price_per_night < 80)
 x <- select(bookings, room_nights, review_score)
 head(x, 2)
 ```
+
+*Spot the error?
 
 ## pipe for people
 
