@@ -86,32 +86,31 @@ properties <- properties %>%
 properties
 ```
 
-## Nesting data into list cols
+## List-cols, worth the effort
 
-Great power can come from **nesting** chunks of data into list cols
+What are we trying to do and why isn't it working?
+
+```{r, error = TRUE}
+bookings %>% 
+  group_by(checkin_day) %>% 
+  summarise(t_test = t.test(review_score ~ for_business))
+```
+
+## List-cols, worth the effort
 
 ```{r}
 bookings %>% 
-  group_by(property_id) %>% 
-  nest()
+  group_by(checkin_day) %>% 
+  summarise(t_test = list(t.test(review_score ~ for_business)))
 ```
 
-## Nesting data into list cols
+## List-cols, worth the effort
 
-```{r, out.width = "600px", echo = FALSE}
-knitr::include_graphics("../images/list_cols-nest.png")
-```
-
-## What's happening here?
-
-```{r, eval = F}
+```{r}
 bookings %>% 
-  drop_na(review_score) %>% 
-  group_by(property_id) %>% 
-  filter(sum(for_business) > 2, sum(!for_business) > 2) %>% 
-  nest() %>% 
-  mutate(t_test = map(data, ~ t.test(review_score ~ for_business, data = .))) %>% 
-  mutate(p_val = map_dbl(t_test, "p.value"))
+  group_by(checkin_day) %>% 
+  summarise(t_test = list(t.test(review_score ~ for_business))) %>% 
+  mutate(p_value = map_dbl(t_test, "p.value"))
 ```
 
 # Bringing it all together
@@ -140,9 +139,7 @@ d <- bookings %>%
   summarise(
     avg_review = mean(review_score, na.rm = TRUE),
     n_bookings = n(),
-    avg_price  = mean(price_per_night)) %>% 
-  group_by(destination) %>% 
-  nest()
+    avg_price  = mean(price_per_night))
 
 d
 ```
@@ -151,11 +148,11 @@ d
 
 ```{r}
 d <- d %>% 
-  mutate(fit = map(data,
-                   ~ lm(avg_review ~
+  group_by(destination) %>% 
+  summarise(fit = list(lm(avg_review ~
                           property_type +
                           n_bookings +
-                          avg_price, .)))
+                          avg_price)))
 
 d
 ```
