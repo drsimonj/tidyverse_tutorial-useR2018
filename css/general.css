@@ -1,0 +1,5 @@
+/* Ensure that images are centered */
+img {
+    display: block;
+    margin: auto;
+}
