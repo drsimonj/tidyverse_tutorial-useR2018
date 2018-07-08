@@ -1,0 +1,30 @@
+---
+title: "Ending the Tidyverse Workshop"
+author: "Simon Jackson"
+date: "Created 11 Sep, 2017; Last Update `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  ioslides_presentation:
+    css: ../css/general.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.align = "centre",
+  warning = FALSE,
+  error = FALSE)
+```
+
+## Getting help
+
+- [tidyverse.org](https://www.tidyverse.org/)
+- [R for Data Science](http://r4ds.had.co.nz/)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/tidyverse)
+- Twitter with [#rstats](https://twitter.com/hashtag/rstats?src=hash) or [\@drsimonj](https://twitter.com/drsimonj)
+- [blogR](https://drsimonj.svbtle.com)
+
+## Thank you!
+
+I hope this was useful for you and thank you for attending!
+
+Please find me to say hi, share feeedback, or just chat!
